@@ -5,7 +5,8 @@
     {name: 'Bread', quantity: '1 item'},
     {name: 'Pears', quantity: '4 kgs'},
     {name: 'Tea', quantity: '2 bags'},
-    {name: 'Cucember', quantity: '10 kgs'}
+    {name: 'Cucember', quantity: '10 kgs'},
+    {name: 'Totoro', quantity: '5 bags'}
   ];
 
 angular.module('ShoppingListCheckOff', [])
