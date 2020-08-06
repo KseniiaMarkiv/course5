@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Lemonada">
+<link rel="stylesheet" href="styles/styles.css">
+
+<div>
+<ul>
+  <li class="dlist-li" ng-repeat="item in dlist.items" id="border">
+    {{ item.short_name }}: {{ item.name }}
+    <button class="dlist-btn" ng-click="dlist.onRemove({index: $index});">Don't want this one!</button>
+    <p>{{item.description}}</p>
+  </li>
+</ul>
+</div>
+<div class="error" ng-if="dlist.items">Nothing found!</div>
+
