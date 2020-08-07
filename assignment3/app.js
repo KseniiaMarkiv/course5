@@ -59,6 +59,7 @@
 });  // .then(function (result) 
     } // service.getMatchedMenuItems
   } // function MenuSearchService
+
 })(); // IIFE
 
 

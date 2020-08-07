@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-
+    <style>
+    	body {
+			  position: relative;
+			  background: url(TLLAK_restaurant-tchaikovsky022.jpg);
+			  background-repeat: repeat;
+			}
+    </style>
   </head>
-<body ng-app="NarrowItDownApp">
-  <section>
-  <img src="styles/TLLAK_restaurant-tchaikovsky02.jpg" alt="Forest">
+<body ng-app="NarrowItDownApp" class="image">
 
+<div>
    <div class="container" ng-controller="NarrowItDownController as ctrl">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
@@ -25,7 +30,6 @@
     items="ctrl.items"
     on-remove="ctrl.removeItem(index)"></found-items>
   </div>
-  </section>
 
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
