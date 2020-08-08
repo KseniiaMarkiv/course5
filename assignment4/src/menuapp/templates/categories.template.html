@@ -1,0 +1,12 @@
+<div>
+  <ul>
+    <li ng-repeat="cat in $ctrl.data">
+      <a ui-sref="items({categoryShortName:cat.short_name})">
+      {{cat.name}}
+      </a>
+      <p>
+        <span ng-if="cat.special_instructions"> {{category.special_instructions}}</span>
+      </p>
+    </li>
+  </ul>
+</div>
