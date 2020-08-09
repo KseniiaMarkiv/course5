@@ -6,12 +6,6 @@ body {
 
 }
 
-.loading-icon {
-  position: absolute;
-  left: 50%;
-  top: 10px;
-}
-
 li[ui-sref]:hover {
   display: inline-block;
   cursor: pointer;
@@ -64,21 +58,45 @@ li[ui-sref]:hover {
   /*font-family: Georgia, serif;*/
   font-weight: bold;
 }
-a{
+span a{
   color: #1B7B34;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.8em;
+}
+a {
+	color: #1B7B34;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+div a {
+	color: #1B7B34;
+  font-weight: bold;
+  text-decoration: none;
+ /* font-size: 2em;*/
 }
 a:hover,a:active{
   color: #eab126;
-  font-style: italic
+  font-style: italic;
 }
 h1 {
   margin: 15px 0;
   font-family: 'Playfair Display', serif;
-  font-size: 26px;
   text-align: center;
   letter-spacing: 2px;
   color: #c2a77a;
+  font-size: 3em;
+}
+
+h3 {
+	margin: 15px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+}
+
+.home {
+	padding: 40px;
+  text-decoration: none;
+  font-size: 2em;
 }
