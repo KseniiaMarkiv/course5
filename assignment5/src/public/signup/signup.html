@@ -67,8 +67,7 @@
                         name="favoriteDish"
                         placeholder="Specify № your favorite dish (example L2)"
                         ng-model="signUpRegCtrl.userInfo.favoriteDish"
-                        ng-blur="signUpRegCtrl.validateFavdish()"                      
-                        required>
+                        ng-blur="signUpRegCtrl.validateFavdish()">
                   <span ng-if="signUpRegCtrl.itemShow && !signUpRegCtrl.saveCode">
                       <small>No such menu number exists, please, specify № your favorite dish <br> (example L2)</small>
                   </span>
