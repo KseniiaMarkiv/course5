@@ -1,0 +1,26 @@
+<div class="myinfo-first">
+<h2 id="menu-categories-title" class="text-center">My Info</h2>
+
+<div class="myinfo" ng-if="myInfoShowCtrl.saved">
+  <div class="myinfo-mess">
+    <dl> 
+      <dt>First Name:</dt> <dd>{{myInfoShowCtrl.userInfo.firstName}}</dd>
+      <dt>Last Name:</dt> <dd>{{myInfoShowCtrl.userInfo.lastName}}</dd>
+      <dt>Email:</dt> <dd>{{myInfoShowCtrl.userInfo.emailAddress}}</dd>
+      <dt>Phone:</dt> <dd>{{myInfoShowCtrl.userInfo.phoneNumber}}</dd>
+      <dt>Favorite Dish:</dt> <dd>{{myInfoShowCtrl.userInfo.favoriteDish}}</dd>
+    </dl>
+  </div>
+  <div class="myinfo-dish">
+    <menu-item menu-item="myInfoShowCtrl.userInfo.MenuItem"></menu-item>
+  </div>
+</div>
+
+<div class="myinfo-message">
+  <div ng-if="!myInfoShowCtrl.saved">
+      <h2>Not Signed Up Yet.</h2>
+      <button type="button" ui-sref="public.signup" class="btn btn-primary">Sign up Now!</button>
+  </div>
+</div>
+
+</div>

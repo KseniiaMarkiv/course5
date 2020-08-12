@@ -108,7 +108,7 @@ body {
   font-size: .8em;
   line-height: 1.8;
 }
-#testimonials {
+#testimonials { /*The best Chinese restaurant*/
   font-style: italic;
 }
 #testimonials p:nth-child(2) {

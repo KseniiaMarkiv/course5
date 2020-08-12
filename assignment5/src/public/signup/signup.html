@@ -1,0 +1,95 @@
+<div class="signup">
+
+  <div ng-if="!signUpRegCtrl.saved"><h2>"Sign up" for the newsletter </h2></div>
+  <div class="signup-left">
+    <div class="signup-box">
+      <fieldset>
+
+          <form name="signUpForm" novalidate>
+              <div class="reg-form">
+                  <label for="firstName">First Name</label>
+                  <input type="text"                        
+                        name="firstName"
+                        placeholder="First Name must be at least 4 characters long"
+                        ng-model="signUpRegCtrl.userInfo.firstName"
+                        minlength="4"
+                        ng-maxlength="10"
+                        required>
+                  <span ng-if="(signUpForm.firstName.$error.minlength || signUpForm.firstName.$error.required) && signUpForm.firstName.$touched">
+                      <small>First Name must be at least 4 characters long</small>
+                  </span>
+                  <span ng-if="signUpForm.firstName.$error.maxlength && signUpForm.firstName.$touched">
+                    <small>First Name must not be longer than 10 characters</small>
+                  </span>
+              </div>
+              <div class="reg-form">
+                  <label for="lastName">Last Name</label>
+                  <input type="text"                       
+                        name="lastName"
+                        placeholder="Last Name must be at least 4 characters long"
+                        ng-model="signUpRegCtrl.userInfo.lastName"
+                        minlength="4"
+                        ng-maxlength="10"
+                        required>
+                  <span ng-if="(signUpForm.lastName.$error.minlength || signUpForm.lastName.$error.required) && signUpForm.lastName.$touched">
+                      <small>Last Name must be at least 4 characters long</small>
+                  </span>
+                  <span ng-if="signUpForm.lastName.$error.maxlength && signUpForm.lastName.$touched">
+                    <small>Last Name must not be longer than 10 characters</small>
+                  </span>
+              </div>
+              <div class="reg-form">
+                  <label for="emailAddress">Email</label>
+                  <input type="email"                    
+                        name="emailAddress"
+                        placeholder="Email (example handle@domain format)"
+                        ng-model="signUpRegCtrl.userInfo.emailAddress"
+                        required>
+                  <span ng-if="signUpForm.emailAddress.$invalid && signUpForm.emailAddress.$touched">
+                      <small>Must be a valid email address: handle@domain format</small>
+                  </span>
+              </div>
+              <div class="reg-form">
+                  <label for="phoneNumber">Phone</label>
+                  <input type="telefon"                        
+                        name="phoneNumber"
+                        ng-model="signUpRegCtrl.userInfo.phoneNumber"
+                        placeholder="Phone ###-###-####"
+                        pattern="(\d{3})-(\d{3})-(\d{4})"
+                        required>
+                  <span ng-if="signUpForm.phoneNumber.$invalid && signUpForm.phoneNumber.$touched">
+                      <small>Phone must be in the format ###-###-####</small>
+                  </span>
+              </div>
+              <div class="reg-form">
+                  <label for="favoriteDish">Favorite Dish</label>
+                  <input type="text"                 
+                        name="favoriteDish"
+                        placeholder="Specify № your favorite dish (example L2)"
+                        ng-model="signUpRegCtrl.userInfo.favoriteDish"
+                        ng-blur="signUpRegCtrl.validateFavdish()"                      
+                        required>
+                  <span ng-if="signUpRegCtrl.itemShow && !signUpRegCtrl.saveCode">
+                      <small>No such menu number exists, please, specify № your favorite dish <br> (example L2)</small>
+                  </span>
+
+              </div>
+              <button class="btn btn-success"
+                      ng-disabled="signUpForm.$invalid"
+                      ng-click="signUpRegCtrl.setMyinfo()">Submit</button>
+          </form>
+      </fieldset>
+    </div> 
+  </div> 
+ 
+    <div class="signup-box-two">
+          <div ng-if="signUpRegCtrl.saveCode">
+            <menu-item menu-item="signUpRegCtrl.userInfo.MenuItem"></menu-item>
+          </div>
+        </div>
+    </div> 
+
+  <div class="signup-message" ng-if="signUpRegCtrl.saved">
+      <p class="alert alert-success">Your information has been saved!</p>
+  </div>
+</div>
