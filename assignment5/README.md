@@ -1,3 +1,5 @@
+Mine assignment is here https://kseniiamarkiv.github.io/course5/assignment5/#/
+
 # Restaurant
 
 Restaurant front-end implementation in AngularJS for David Chu's China Bistro.
